@@ -4,9 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "test:open": "cypress open",
-    "test:report": "cypress run && npm run report:html",
-    "report:html": "node cypress/plugins/generateReport.js"
+    "test:open": "cypress open"
   },
 
   "devDependencies": {
