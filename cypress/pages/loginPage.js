@@ -5,7 +5,7 @@ class LoginPage{
         usernameInput: () => cy.get('#user-name'),
         passwordInput: () => cy.get('#password'),
         loginButton: () => cy.get('#login-button'),
-        blockedUserErrorMessage: () => cy.get('[data-test="error"]')
+        ErrorMessage: () => cy.get('[data-test="error"]')
     }
 
     getLoginLogo(){
@@ -20,8 +20,8 @@ class LoginPage{
     clickLoginButton(){
         this.elements.loginButton().click();
     }
-    getBlockedUserErrorMessage(){
-        return this.elements.blockedUserErrorMessage();
+    getErrorMessage(){
+        return this.elements.ErrorMessage();
     }
 }
 export default LoginPage;

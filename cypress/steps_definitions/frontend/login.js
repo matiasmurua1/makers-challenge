@@ -21,5 +21,5 @@ Then("deberia iniciar sesion exitosamente y ser redirigido a la pagina de inicio
 });
 
 Then("verifico que se muestre el mensaje de error {string}", (errorMessage) => {
-    loginPage.getBlockedUserErrorMessage().should("contain.text", errorMessage);
+    loginPage.getErrorMessage().should("contain.text", errorMessage);
 }); 
