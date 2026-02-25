@@ -1,0 +1,10 @@
+{
+    "workbench.settings.useSplitJSON": false,
+    "cucumberautocomplete.steps": [
+        "cypress/steps_definitions/**/*.js"
+      ],
+   "cucumberautocomplete.syncfeatures": "cypress/features/**/*.feature",
+   "cucumberautocomplete.strictGherkinCompletion": false,
+   "cucumberautocomplete.smartSnippets": true,
+   "cucumberautocomplete.stepsInvariants": true
+}
