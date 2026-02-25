@@ -11,11 +11,16 @@ class LoginPage{
     getLoginLogo(){
         return this.elements.loginLogo();
     }
-    setUsername(username){
-        this.elements.usernameInput().type(username);
+    setUsername(username) {
+        if (username && username.trim().length > 0) {
+            this.elements.usernameInput().type(username);
     }
-    setPassword(password){
-        this.elements.passwordInput().type(password);
+    }
+
+    setPassword(password) {
+        if (password && password.trim().length > 0) {
+            this.elements.passwordInput().type(password);
+    }
     }
     clickLoginButton(){
         this.elements.loginButton().click();

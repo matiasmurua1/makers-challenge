@@ -21,3 +21,13 @@ Feature: Validación iniciar sesion en Swag Labs
       | standard_user           | fail_password |
       | problem_user            | fail_password |
       | performance_glitch_user | fail_password |
+
+  @PASS
+  Scenario:TC-LOGIN-003 Validacion de campos obligatorios
+    Given que estoy en la pagina de login de Swag Labs
+    When ingreso el username "<userName>" y password "<password>"
+    Then verifico que se muestre el mensaje de error "<errorMessage>"
+    Examples:
+      | userName       | password       | errorMessage |
+      |                | secret_sauce   | Epic sadface: Username is required |
+      | standard_user  |                | Epic sadface: Password is required |
